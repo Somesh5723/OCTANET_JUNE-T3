@@ -2,7 +2,7 @@ console.log("Welcome To Spotify")
 
 // Variables
 let songIndex = 0;
-let audioElement = new Audio('./assets/songs/1.mp3');
+let audioElement = new Audio('./assets/songs/1.m4a');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
@@ -11,15 +11,15 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 
 let songs = [
-    {songName:"Amplifier", filePath:"./assets/songs/10.mp3", coverPath: "/assets/covers/10.jpg"},
-    {songName:"Na Za", filePath:"./assets/songs/9.mp3" , coverPath: "/assets/covers/9.jpg"},
-    {songName:"Uri", filePath:"./assets/songs/8.mp3" , coverPath: "/assets/covers/8.jpg"},
-    {songName:"Amplifier", filePath:"./assets/songs/7.mp3" , coverPath: "/assets/covers/7.jpg"},
-    {songName:"Amplifier", filePath:"./assets/songs/6.mp3" , coverPath: "/assets/covers/6.jpg"},
-    {songName:"Amplifier", filePath:"./assets/songs/5.mp3" , coverPath: "/assets/covers/5.jpg"},
-    {songName:"Amplifier", filePath:"./assets/songs/4.mp3" , coverPath: "/assets/covers/4.jpg"},
-    {songName:"Amplifier", filePath:"./assets/songs/3.mp3" , coverPath: "/assets/covers/3.jpg"},
-    {songName:"True Love", filePath:"./assets/songs/2.mp3" , coverPath: "/assets/covers/2.jpg"}
+    {songName:"Dope Shope", filePath:"./assets/songs/1.m4a", coverPath: "/assets/Img/1.jpeg"},
+    {songName:"Haryana Hood", filePath:"./assets/songs/2.m4a" , coverPath: "/assets/Img/2.jpeg"},
+    {songName:"Naah-Sindhu", filePath:"./assets/songs/3.m4a" , coverPath: "/assets/Img/3.jpg"},
+    {songName:"Rao - Sahab", filePath:"./assets/songs/4.m4a" , coverPath: "/assets/Img/4.jpeg"},
+    {songName:"Systuummmm", filePath:"./assets/songs/5.m4a" , coverPath: "/assets/Img/5.jpeg"},
+    {songName:"Wakhra Swag", filePath:"./assets/songs/6.m4a" , coverPath: "/assets/Img/6.jpeg"},
+    {songName:"Yadav Brand", filePath:"./assets/songs/7.m4a" , coverPath: "/assets/Img/7.jpeg"}
+    // {songName:"Amplifier", filePath:"./assets/songs/3.mp3" , coverPath: "/assets/covers/3.jpg"},
+    // {songName:"True Love", filePath:"./assets/songs/2.mp3" , coverPath: "/assets/covers/2.jpg"}
 ];
 
 songItems.forEach((element, i)=>{ 
@@ -74,7 +74,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause'); 
 
-        audioElement.src = `./assets/songs/${songIndex+1}.mp3`;
+        audioElement.src = `./assets/songs/${songIndex+1}.m4a`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -94,7 +94,7 @@ document.getElementById('previous').addEventListener('click',()=>{
         songIndex -= 1;
     }
     
-    audioElement.src = `./assets/songs/${songIndex+1}.mp3`;
+    audioElement.src = `./assets/songs/${songIndex+1}.m4a`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     
@@ -114,7 +114,7 @@ document.getElementById('next').addEventListener('click',()=>{
         songIndex += 1;
     }
     
-    audioElement.src = `./assets/songs/${songIndex+1}.mp3`;
+    audioElement.src = `./assets/songs/${songIndex+1}.m4a`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     

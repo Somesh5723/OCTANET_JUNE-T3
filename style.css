@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Varela+Round&display=swap');
 
 body{
-    background-color: antiquewhite;
+    background-color: rgb(230, 228, 227);
 }
 
 *{
@@ -57,7 +57,7 @@ nav ul li{
 
 .bottom{
     position: sticky;
-    height: 100px;
+    height: 85px;
     background-color: black;
     color: white;
     bottom: 0;
@@ -91,6 +91,12 @@ nav ul li{
     border-radius: 30px;
 }
 
+/* .songItemPlay{
+    float: right;
+    margin: 10px;
+    position: relative;
+} */
+
 .songItem img{
     width: 35px;
     margin: 0 23px;
@@ -118,4 +124,15 @@ nav ul li{
 .songInfo img{
    opacity: 0;
    transition: opacity 0.4s ease-in;
+}
+
+
+@media screen and (max-width:360px){
+    .songInfo{
+        left: 0vw;
+    }
+    
+    .songInfo img{
+        display: none;
+    }
 }
